@@ -1,0 +1,107 @@
+<div class="main">
+  <div class="infos">
+    <div class="gamer">
+      <p>Jogador:</p>
+      <p *ngIf="playesNames">
+        {{ playesNames.name1 }}
+      </p>
+    </div>
+    <div class="nextPlayer" *ngIf="turnPlayer1">
+      <p>Sua vez!</p>
+    </div>
+    <div class="parts">
+      <div *ngFor="let part of buttonsPlayer1; let i = index">
+        <app-card
+          class="card{{ i }}"
+          [selectCard]="part"
+          [allowedStatic]="true"
+        ></app-card>
+      </div>
+    </div>
+  </div>
+  <div class="cards">
+    <app-card
+      class="card-0"
+      [idCard]="'00'"
+      [selectCard]="buttonClick"
+      [refresh]="refresh"
+      (selected)="cardSelected($event)"
+    ></app-card>
+    <app-card
+      class="card-1"
+      [idCard]="'01'"
+      [selectCard]="buttonClick"
+      [refresh]="refresh"
+      (selected)="cardSelected($event)"
+    ></app-card>
+    <app-card
+      class="card-2"
+      [idCard]="'02'"
+      [selectCard]="buttonClick"
+      [refresh]="refresh"
+      (selected)="cardSelected($event)"
+    ></app-card>
+    <app-card
+      class="card-3"
+      [idCard]="'10'"
+      [selectCard]="buttonClick"
+      [refresh]="refresh"
+      (selected)="cardSelected($event)"
+    ></app-card>
+    <app-card
+      class="card-4"
+      [idCard]="'11'"
+      [selectCard]="buttonClick"
+      [refresh]="refresh"
+      (selected)="cardSelected($event)"
+    ></app-card>
+    <app-card
+      class="card-5"
+      [idCard]="'12'"
+      [selectCard]="buttonClick"
+      [refresh]="refresh"
+      (selected)="cardSelected($event)"
+    ></app-card>
+    <app-card
+      class="card-6"
+      [idCard]="'20'"
+      [selectCard]="buttonClick"
+      [refresh]="refresh"
+      (selected)="cardSelected($event)"
+    ></app-card>
+    <app-card
+      class="card-7"
+      [idCard]="'21'"
+      [selectCard]="buttonClick"
+      [refresh]="refresh"
+      (selected)="cardSelected($event)"
+    ></app-card>
+    <app-card
+      class="card-8"
+      [idCard]="'22'"
+      [selectCard]="buttonClick"
+      [refresh]="refresh"
+      (selected)="cardSelected($event)"
+    ></app-card>
+  </div>
+  <div class="infos">
+    <div class="gamer">
+      <p>Jogador:</p>
+      <p *ngIf="playesNames">
+        {{ playesNames.name2 }}
+      </p>
+    </div>
+    <div class="nextPlayer" *ngIf="turnPlayer2">
+      <p>Sua vez!</p>
+    </div>
+    <div class="parts">
+      <div *ngFor="let part of buttonsPlayer2; let i = index">
+        <app-card
+          class="card{{ i }}"
+          [selectCard]="part"
+          [allowedStatic]="true"
+        ></app-card>
+      </div>
+    </div>
+  </div>
+</div>

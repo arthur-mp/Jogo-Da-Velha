@@ -1,0 +1,48 @@
+@import '../assets/scss/variables.scss';
+
+.view{
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+.header, .footer{
+    background: $toolbar;
+    padding: 15px 30px 15px 30px;
+    color: white;
+    font: 400 24px/32px Roboto,Helvetica Neue,sans-serif;
+    letter-spacing: normal;
+}
+
+.header{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.content{
+    padding: 10px 10px 10px 10px;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+
+.footer{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    
+
+    .linkGit{
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+
+        .imgGit{
+            padding-right: 0.5rem;
+        }
+    }
+}

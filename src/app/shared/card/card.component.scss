@@ -1,0 +1,17 @@
+@import '../../../assets/scss/variables.scss';
+
+.card-container{
+    height: 100%;
+    background-color: $card;
+    border: 1px solid $border;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-container:hover{
+    background-color: $mouseHouver;
+}
+
+

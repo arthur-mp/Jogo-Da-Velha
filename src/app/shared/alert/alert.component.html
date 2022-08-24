@@ -1,0 +1,19 @@
+<div
+  [ngClass]="{
+    win: gameResult == 'win',
+    loss: gameResult == 'loss'
+  }"
+>
+  <h1 mat-dialog-title *ngIf="gameResult == 'win'">
+    Vencedor {{ winningPlayer }}!!!
+  </h1>
+  <h1 mat-dialog-title *ngIf="gameResult == 'loss'">Velha :(</h1>
+</div>
+
+<div mat-dialog-content>
+  <p>Jogar novamente?</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="playAgain()">Sim</button>
+  <button mat-button (click)="doNotPlay()">Não</button>
+</div>

@@ -1,0 +1,23 @@
+
+  <div
+    class=" card-container select-x"
+    *ngIf="cardSelected == 'x' && (allowed || allowedStatic) && !refresh"
+    (click)="changeSelect()"
+  >
+  <mat-icon>clear</mat-icon>
+  </div>
+
+  <div
+    class="card-container select-o"
+    *ngIf="cardSelected == 'o' && (allowed || allowedStatic) && !refresh"
+    (click)="changeSelect()"
+  >
+  <mat-icon>panorama_fish_eye</mat-icon>
+  </div>
+
+  <div
+    class="card-container initial"
+    *ngIf="!cardSelected"
+    (click)="changeSelect()"
+  >
+  </div>
